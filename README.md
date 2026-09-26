@@ -4,6 +4,12 @@ Solução completa desenvolvida para a avaliação técnica de desenvolvedor sê
 
 A aplicação foi estruturada no padrão **BFF (Backend-For-Frontend)** em **Next.js (App Router)** com **TypeScript**, garantindo **segurança de credenciais no servidor**, eliminação definitiva de bloqueios de CORS, parser CNAB 444 com validações estruturais, suíte de testes unitários com **Vitest** e interface reativa com **Tailwind CSS**.
 
+> 🌐 **Aplicação no Ar (Produção / Vercel):**  
+> 👉 **[https://prova-dev-fattor-indol.vercel.app](https://prova-dev-fattor-indol.vercel.app)**
+>
+> 📦 **Pacote de Testes para Download Direto:**  
+> 👉 **[Download pacote_dados_cnab444.zip](https://prova-dev-fattor-indol.vercel.app/pacote_dados_cnab444.zip)** (6 cenários incluindo lote de 1.200 títulos)
+
 ---
 
 ## 📑 Sumário

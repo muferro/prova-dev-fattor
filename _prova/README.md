@@ -2,6 +2,9 @@
 
 Esta pasta contém o material da prova técnica e as documentações detalhadas de resolução de cada uma das etapas propostas.
 
+> 🌐 **Deploy Oficial no Ar (Vercel):**  
+> 👉 **[https://prova-dev-fattor-indol.vercel.app](https://prova-dev-fattor-indol.vercel.app)**
+
 ---
 
 ## Índice das Etapas
