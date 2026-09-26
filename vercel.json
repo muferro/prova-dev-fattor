@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api-fattor/:path*",
+      "destination": "https://symphony.fattorcredito.com.br/public/prova-dev/:path*"
+    }
+  ]
+}
