@@ -97,5 +97,17 @@ A aplicação foi desenvolvida no ecossistema **Next.js (App Router) + TypeScrip
 - **Pacote Completo de Testes:** 6 cenários práticos (`.rem`, `.ret`, `.txt`) com botão de download de pacote `.zip`.
 - **Suíte de Testes Automatizados:** 20 testes unitários com Vitest cobrindo 100% dos módulos críticos.
 
-Consulte o [README.md principal](../README.md) para instruções detalhadas de arquitetura e execução.
+### 🚀 Como Executar Rapidamente
+```bash
+npm install
+cp .env.example .env.local
+npm run dev
+# Acesse: http://localhost:3000
+
+# Executar testes unitários:
+npm test
+```
+
+Consulte o [README.md principal](../README.md) para a documentação técnica completa e diagrama arquitetural.
+
 

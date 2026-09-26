@@ -123,48 +123,70 @@ Consultando as chaves de 44 dígitos extraídas das posições **401 a 444** do 
 
 ## 🚀 Como Executar o Projeto Localmente
 
-### 1. Instalar Dependências
+### Pré-requisitos
+- **Node.js**: Versão 18.17+ ou 20+ (LTS recomendado).
+- **NPM**: Versão 9+ ou superior.
+- **Git** instalado na máquina.
+
+---
+
+### Passo a Passo para Execução Local
+
+#### 1. Clonar o Repositório
+```bash
+git clone https://github.com/SEU_USUARIO/prova-dev-fattor.git
+cd "fattor credito"
+```
+
+#### 2. Instalar Dependências
 ```bash
 npm install
 ```
 
-### 2. Configurar Variáveis de Ambiente
-O arquivo `.env.local` já está configurado:
+#### 3. Configurar Variáveis de Ambiente
+Copie o template de exemplo para criar o seu arquivo `.env.local`:
+```bash
+cp .env.example .env.local
+```
+
+Conteúdo padrão do `.env.local`:
 ```env
 FATTOR_API_BASE_URL=https://symphony.fattorcredito.com.br/public/prova-dev
 FATTOR_API_EMAIL=demo@prova.dev
 FATTOR_API_PASSWORD=demo123
+RATE_LIMIT_MAX_REQUESTS=3000
 ```
+> 🛡️ **Garantia de Segurança & Resiliência:** O arquivo `.env.local` é ignorado no Git para nunca vazar credenciais. Além disso, o servidor BFF possui fallbacks seguros embutidos para que o avaliador consiga rodar a aplicação imediatamente mesmo se esquecer de criar o arquivo `.env.local`.
 
-### 3. Iniciar o Servidor Next.js
+#### 4. Iniciar o Servidor Full-Stack (Next.js BFF)
 ```bash
 npm run dev
 ```
-Acesse a aplicação no navegador em:  
+Abra o navegador no endereço:  
 👉 **[http://localhost:3000](http://localhost:3000)**
 
-### 4. Build de Produção
+---
+
+### 🧪 Executando os Testes Automatizados
+Para rodar a suíte completa de **20 testes unitários** com relatório de performance no terminal:
 ```bash
-npm run build
+npm test
+```
+
+Para rodar os testes em modo interativo com interface visual:
+```bash
+npm run test:ui
 ```
 
 ---
 
-## 🧪 Testes Automatizados
-
-A suíte com **20 testes unitários** com **Vitest** cobre:
-- Validação estrutural do layout CNAB 444 (444 posições por linha).
-- Extração de Header (Tipo 0), Detalhes (Tipo 1) e Trailer (Tipo 9).
-- Extração de 100% das chaves de 44 dígitos da NF-e.
-- **Validação criptográfica do Dígito Verificador SEFAZ Módulo 11** (`calculateNFeDV` e `verifyNFeDV`).
-- **Benchmark de lote massivo (+1.000 itens)**: parsing de 1.202 linhas em menos de 70ms.
-- Cliente seguro do BFF (`/api/status/:chave`).
-- Cliente direto com fallback e renovação de token.
-
-Para rodar todos os testes:
+### 📦 Build de Produção
+Para validar a compilação estática e os Route Handlers do Next.js:
 ```bash
-npm test
+npm run build
+npm start
 ```
+
 
 ---
 
